@@ -11,6 +11,7 @@ from urllib.parse import urljoin, urlparse
 
 try:
     import requests
+    # pyrefly: ignore[missing-import]
     from bs4 import BeautifulSoup
     HAS_EXTERNAL_SCRAPING_LIBS = True
 except ImportError:

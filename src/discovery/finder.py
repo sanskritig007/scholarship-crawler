@@ -128,3 +128,4 @@ class DiscoveryEngine:
             discovered = self.discover_from_seed(seed["url"])
             all_candidates.extend(discovered)
         return all_candidates
+
