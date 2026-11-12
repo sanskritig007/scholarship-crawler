@@ -355,3 +355,4 @@ def get_dashboard_metrics(db_path: Path = DB_PATH) -> Dict[str, Any]:
             "average_confidence": round(avg_confidence, 1),
             "total_changes_detected": total_changes
         }
+
