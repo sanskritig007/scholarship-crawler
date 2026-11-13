@@ -21,7 +21,6 @@ from src.database import (
 
 st.set_page_config(
     page_title="Atlas Funding | Scholarship Intelligence",
-    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -128,7 +127,7 @@ metrics = get_dashboard_metrics()
 # Top Hero Banner with Breathing Space
 col_logo, col_heading = st.columns([0.08, 0.92])
 with col_logo:
-    st.markdown("<div style='font-size: 2.8rem; padding-top: 4px;'>🎓</div>", unsafe_allow_html=True)
+    st.markdown("<div style='font-size: 1.6rem; font-weight: 800; color: #3b82f6; padding-top: 8px;'>AF</div>", unsafe_allow_html=True)
 with col_heading:
     st.markdown("<h1 style='margin: 0; font-size: 2rem; font-weight: 800; letter-spacing: -0.02em;'>Atlas Scholarship Intelligence</h1>", unsafe_allow_html=True)
     st.markdown("<p style='margin-top: 4px; color: #94a3b8; font-size: 0.95rem;'>Continuous Autonomous Crawler, Evidence Grounding & Verification Engine</p>", unsafe_allow_html=True)
@@ -181,7 +180,7 @@ with left_col:
         st.info("No scholarship opportunities matched your search criteria.")
         selected_id = None
     else:
-        labels_map = {f"🎓 {r['name'][:50]}... [{r['source_type']}]": r["id"] for r in filtered}
+        labels_map = {f"{r['name'][:55]}... [{r['source_type']}]": r["id"] for r in filtered}
         chosen_label = st.radio("Select Scheme to inspect:", list(labels_map.keys()), label_visibility="collapsed")
         selected_id = labels_map[chosen_label]
 
@@ -191,7 +190,7 @@ with right_col:
         if item:
             # Header Box
             st.markdown(f"<h2 style='font-size: 1.4rem; font-weight: 700; margin-bottom: 4px;'>{item['name']}</h2>", unsafe_allow_html=True)
-            st.markdown(f"<div style='color: #94a3b8; font-size: 0.88rem; margin-bottom: 16px;'>🏢 <b>{item['provider']}</b> • 🏷️ <b>{item['source_type']}</b></div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='color: #94a3b8; font-size: 0.88rem; margin-bottom: 16px;'><b>Provider:</b> {item['provider']} &bull; <b>Type:</b> {item['source_type']}</div>", unsafe_allow_html=True)
 
             score = item['confidence_score']
             badge_cls = "status-badge-active" if item['status'] == "ACTIVE" else ("status-badge-expired" if item['status'] == "EXPIRED" else "status-badge-review")
@@ -207,34 +206,34 @@ with right_col:
 
             # Clean Tabs for Details
             tab1, tab2, tab3, tab4 = st.tabs([
-                "📋 Program Details",
-                "🎯 Confidence Rubric",
-                "🔍 Grounded Evidence",
-                "🕒 Corrigendum & Changes"
+                "Program Details",
+                "Confidence Rubric",
+                "Grounded Evidence",
+                "Corrigendum & Changes"
             ])
 
             with tab1:
                 st.markdown("<div style='margin-top: 12px;'></div>", unsafe_allow_html=True)
                 d1, d2 = st.columns(2)
                 with d1:
-                    st.markdown(f"**💰 Financial Benefit:** {item['amount']}")
-                    st.markdown(f"**📅 Application Deadline:** {item['deadline']}")
-                    st.markdown(f"**💼 Income Ceiling:** {item['income_limit']}")
+                    st.markdown(f"**Financial Benefit:** {item['amount']}")
+                    st.markdown(f"**Application Deadline:** {item['deadline']}")
+                    st.markdown(f"**Income Ceiling:** {item['income_limit']}")
                 with d2:
-                    st.markdown(f"**🎓 Education Level:** {item['education_level']}")
-                    st.markdown(f"**👥 Target Gender:** {item['gender']}")
-                    st.markdown(f"**🏷️ Reservation Category:** {item['category']}")
+                    st.markdown(f"**Education Level:** {item['education_level']}")
+                    st.markdown(f"**Target Gender:** {item['gender']}")
+                    st.markdown(f"**Reservation Category:** {item['category']}")
 
-                st.markdown(f"**📄 Documents Required:** {item.get('documents_required', 'Standard documents')}")
+                st.markdown(f"**Documents Required:** {item.get('documents_required', 'Standard documents')}")
                 st.markdown("---")
                 if item.get("application_url") and item.get("application_url") != item.get("official_source_url"):
                     btn_col1, btn_col2 = st.columns(2)
                     with btn_col1:
-                        st.link_button("🌐 Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
+                        st.link_button("Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
                     with btn_col2:
-                        st.link_button("📝 Direct Application Portal ↗", item["application_url"], use_container_width=True)
+                        st.link_button("Direct Application Portal ↗", item["application_url"], use_container_width=True)
                 else:
-                    st.link_button("🌐 Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
+                    st.link_button("Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
 
             with tab2:
                 st.markdown("<div style='margin-top: 12px;'></div>", unsafe_allow_html=True)
@@ -266,7 +265,7 @@ with right_col:
                 st.markdown("<div style='margin-top: 12px;'></div>", unsafe_allow_html=True)
                 history = get_scholarship_history(item["id"])
                 if history:
-                    st.success(f"⚡ {len(history)} change event(s) detected and preserved in audit trail:")
+                    st.success(f"{len(history)} change event(s) detected and preserved in audit trail:")
                     for h in history:
                         st.markdown(f"""
                         <div class='history-card-box'>

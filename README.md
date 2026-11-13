@@ -1,4 +1,4 @@
-# 🎓 Atlas Scholarship Intelligence Engine
+# Atlas Scholarship Intelligence Engine
 
 > **Edxso AI Engineer Intern — Assignment 2**  
 > An autonomous, continuous intelligence engine that discovers, extracts, verifies, scores, and audits authentic scholarship opportunities for Indian students.
@@ -7,6 +7,14 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)
 [![Database](https://img.shields.io/badge/Database-SQLite%203-lightgrey)](data/scholarships.db)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+---
+
+> [!NOTE]
+> ### 💡 Authorship, System Architecture & Engineering Ownership
+> * **Conception, System Design & Problem Solving:** 100% conceived, architected, and directed by **Sanskriti Goswami**.
+> * **AI Assistance Disclosure:** Generative AI was leveraged strictly as an accelerator for code synthesis, boilerplate generation, and rapid iteration under my constant instruction and review.
+> * **Engineering Ownership:** Not a single architectural decision, schema field, or edge-case handling mechanism was decided autonomously by AI. Every idea—from the 4-pillar deterministic confidence rubric and verbatim sentence grounding to the third-party aggregator penalty, dual-portal URL distinction, and legacy government ASP.NET/IIS crash mitigations—came from my direct analysis of the assignment requirements and real-world portal constraints.
 
 ---
 

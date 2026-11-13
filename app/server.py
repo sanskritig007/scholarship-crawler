@@ -656,7 +656,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <!-- Top App Bar -->
         <header>
             <div class="brand-cluster">
-                <div class="brand-logo">🎓</div>
+                <div class="brand-logo" style="font-weight: 800; font-size: 1.1rem; color: #fff; letter-spacing: -0.05em;">AF</div>
                 <div class="brand-text">
                     <h1>Atlas Scholarship Intelligence <span class="live-tag"><span class="pulse-dot"></span> Crawler Active</span></h1>
                     <p>Continuous Autonomous Verification, Multi-Source Normalization & Change Audit Engine</p>
@@ -674,39 +674,39 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="metric-card">
                 <div class="metric-label">Total Discovered</div>
                 <div class="metric-number" id="m-total">24</div>
-                <div class="metric-foot">🎯 Target: ≥ 20 schemes</div>
+                <div class="metric-foot">Target: ≥ 20 schemes</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Verified (≥ 95%)</div>
                 <div class="metric-number" style="color: #34d399;" id="m-verified">20</div>
-                <div class="metric-foot">✅ Authoritative Primary</div>
+                <div class="metric-foot">Authoritative Primary Sources</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Review Required</div>
                 <div class="metric-number" style="color: #fbbf24;" id="m-review">2</div>
-                <div class="metric-foot">⚠️ Score < 95% flagged</div>
+                <div class="metric-foot">Score &lt; 95% Flagged</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Active Schemes</div>
                 <div class="metric-number" id="m-active">20</div>
-                <div class="metric-foot">📅 Open 2026-27 Intake</div>
+                <div class="metric-foot">Open 2026-27 Intake</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Expired / Stale</div>
                 <div class="metric-number" style="color: #f87171;" id="m-expired">2</div>
-                <div class="metric-foot">🕒 Historical archives</div>
+                <div class="metric-foot">Historical Archives</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Avg Confidence</div>
                 <div class="metric-number" style="color: #38bdf8;" id="m-conf">95.6%</div>
-                <div class="metric-foot">📊 4-Pillar Rubric Avg</div>
+                <div class="metric-foot">4-Pillar Rubric Average</div>
             </div>
         </div>
 
         <!-- Filter & Search Toolbar -->
         <div class="toolbar">
             <div class="search-input-wrap">
-                <span class="search-icon">🔍</span>
+                <span class="search-icon" style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">FIND</span>
                 <input type="text" id="searchInput" class="search-input" placeholder="Search by scheme name, ministry, foundation, or benefit..." oninput="handleFilter()">
             </div>
             <div class="filter-pills" id="categoryPills">
@@ -804,7 +804,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <div class="scheme-header">
                             <div class="scheme-title">${r.name}</div>
                         </div>
-                        <div class="scheme-provider">🏢 ${r.provider}</div>
+                        <div class="scheme-provider">${r.provider}</div>
                         <div class="scheme-chips">
                             <span class="tag-chip">${r.source_type}</span>
                             <span class="status-chip ${statusClass}">${r.status}</span>
@@ -840,7 +840,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 for (const [k, v] of Object.entries(item.evidence)) {
                     evidenceHtml += `
                         <div class="evidence-item">
-                            <div class="evidence-field">📌 Verified Grounding [${k}]</div>
+                            <div class="evidence-field">Verified Grounding: ${k.toUpperCase()}</div>
                             <div class="evidence-quote">"${v}"</div>
                         </div>
                     `;
@@ -856,8 +856,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <div class="timeline-dot"></div>
                         <div class="timeline-card">
                             <div class="timeline-header">
-                                <span>⚡ Field Modified: <b>${h.field_name.toUpperCase()}</b></span>
-                                <span>🕒 ${h.detected_at.replace('T', ' ').substring(0, 19)} UTC</span>
+                                <span>Modification Detected: <b>${h.field_name.toUpperCase()}</b></span>
+                                <span>${h.detected_at.replace('T', ' ').substring(0, 19)} UTC</span>
                             </div>
                             <div class="delta-row">
                                 <span class="old-val">${h.old_value}</span>
@@ -873,7 +873,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             } else {
                 historyHtml = `
                     <div style="background: var(--bg-card); padding: 24px; border-radius: 8px; text-align: center; color: var(--text-muted); border: 1px dashed var(--border-subtle);">
-                        ✅ Initial Crawl Baseline Verified. No changes detected on recent runs.
+                        Initial Crawl Baseline Verified. No modifications observed on recent runs.
                     </div>
                 `;
             }
@@ -883,11 +883,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <div class="detail-title-cluster">
                         <h2>${item.name}</h2>
                         <div class="detail-meta-row">
-                            <span>🏢 <b>${item.provider}</b></span>
+                            <span><b>${item.provider}</b></span>
                             <span>•</span>
-                            <span>🏷️ <b>${item.source_type}</b></span>
+                            <span>Category: <b>${item.source_type}</b></span>
                             <span>•</span>
-                            <span>📅 Intake: <b>${item.deadline}</b></span>
+                            <span>Intake: <b>${item.deadline}</b></span>
                         </div>
                     </div>
                     <div class="score-hero-badge">
@@ -897,53 +897,53 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
 
                 <div class="tab-nav">
-                    <button class="tab-btn active" onclick="switchTab('tab-overview', this)">📋 Program Overview</button>
-                    <button class="tab-btn" onclick="switchTab('tab-rubric', this)">🎯 Confidence Formula</button>
-                    <button class="tab-btn" onclick="switchTab('tab-evidence', this)">🔍 Evidence Trace (${Object.keys(item.evidence || {}).length})</button>
-                    <button class="tab-btn" onclick="switchTab('tab-history', this)">🕒 Corrigendum History (${history.length})</button>
+                    <button class="tab-btn active" onclick="switchTab('tab-overview', this)">Program Overview</button>
+                    <button class="tab-btn" onclick="switchTab('tab-rubric', this)">Confidence Formula</button>
+                    <button class="tab-btn" onclick="switchTab('tab-evidence', this)">Evidence Trace (${Object.keys(item.evidence || {}).length})</button>
+                    <button class="tab-btn" onclick="switchTab('tab-history', this)">Corrigendum History (${history.length})</button>
                 </div>
 
                 <!-- Tab 1: Overview -->
                 <div class="tab-content active" id="tab-overview">
                     <div class="criteria-grid">
                         <div class="criteria-box">
-                            <div class="criteria-title">💰 Financial Grant / Benefit</div>
+                            <div class="criteria-title">Financial Grant / Benefit</div>
                             <div class="criteria-value">${item.amount}</div>
                         </div>
                         <div class="criteria-box">
-                            <div class="criteria-title">📅 Official Deadline</div>
+                            <div class="criteria-title">Official Deadline</div>
                             <div class="criteria-value">${item.deadline}</div>
                         </div>
                         <div class="criteria-box">
-                            <div class="criteria-title">💼 Parental Income Ceiling</div>
+                            <div class="criteria-title">Parental Income Ceiling</div>
                             <div class="criteria-value">${item.income_limit}</div>
                         </div>
                         <div class="criteria-box">
-                            <div class="criteria-title">🎓 Education Level</div>
+                            <div class="criteria-title">Education Level</div>
                             <div class="criteria-value">${item.education_level}</div>
                         </div>
                         <div class="criteria-box">
-                            <div class="criteria-title">👥 Gender Eligibility</div>
+                            <div class="criteria-title">Gender Eligibility</div>
                             <div class="criteria-value">${item.gender}</div>
                         </div>
                         <div class="criteria-box">
-                            <div class="criteria-title">🏷️ Reservation / Social Group</div>
+                            <div class="criteria-title">Reservation / Social Group</div>
                             <div class="criteria-value">${item.category}</div>
                         </div>
                     </div>
 
                     <div style="background: var(--bg-card); padding: 16px; border-radius: 10px; border: 1px solid var(--border-subtle); margin-bottom: 20px;">
-                        <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">📄 Required Documents</div>
+                        <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px;">Required Documents</div>
                         <div style="font-size: 0.88rem; color: var(--text-secondary);">${item.documents_required || 'Standard documents required.'}</div>
                     </div>
 
                     <div class="action-row">
                         <a href="${item.official_source_url}" target="_blank" class="btn-action primary">
-                            🌐 View Primary Official Portal ↗
+                            View Primary Official Portal ↗
                         </a>
                         ${item.application_url && item.application_url !== item.official_source_url ? `
                             <a href="${item.application_url}" target="_blank" class="btn-action secondary">
-                                📝 Direct Online Application ↗
+                                Direct Online Application ↗
                             </a>
                         ` : ''}
                     </div>
@@ -1069,8 +1069,8 @@ def run_server(port=PORT):
         httpd = ReusableTCPServer(("", port), DashboardHTTPHandler)
 
     print(f"\n=======================================================")
-    print(f"  🎓 Atlas Funding Intelligence Dashboard LIVE on:")
-    print(f"  👉 http://localhost:{port}")
+    print(f"  Atlas Funding Intelligence Dashboard LIVE on:")
+    print(f"  --> http://localhost:{port}")
     print(f"=======================================================\n")
     try:
         httpd.serve_forever()

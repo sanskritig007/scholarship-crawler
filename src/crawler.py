@@ -4,9 +4,15 @@ Executes Run 1 (Seed discovery, verification, and database population for 20+ re
 and Run 2 (Lifecycle audit, change detection, and expired tracking).
 Dates are aligned with the 2026-2027 academic intake cycle.
 """
+import sys
 import logging
+from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any
+
+# Ensure project root is in sys.path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from src.database import init_db, save_scholarship, log_crawl_run, get_all_scholarships
 from src.verification.validator import verify_and_score_scholarship
 from src.config import STATUS_ACTIVE, STATUS_EXPIRED, STATUS_REVIEW_REQUIRED
