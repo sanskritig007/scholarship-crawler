@@ -6,6 +6,7 @@
 [![Tests](https://img.shields.io/badge/Tests-22%20Passed-success)](tests/)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)
 [![Database](https://img.shields.io/badge/Database-SQLite%203-lightgrey)](data/scholarships.db)
+[![Demo Video](https://img.shields.io/badge/Demo%20Video-Google%20Drive-red?logo=googledrive)](https://drive.google.com/file/d/1jAfyCGAc9T-W_cY2MJQA8KfHO7TgaXuR/view?usp=sharing)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
@@ -15,6 +16,14 @@
 > * **Conception, System Design & Problem Solving:** 100% conceived, architected, and directed by **Sanskriti Goswami**.
 > * **AI Assistance Disclosure:** Generative AI was leveraged strictly as an accelerator for code synthesis, boilerplate generation, and rapid iteration under my constant instruction and review.
 > * **Engineering Ownership:** Not a single architectural decision, schema field, or edge-case handling mechanism was decided autonomously by AI. Every idea—from the 4-pillar deterministic confidence rubric and verbatim sentence grounding to the third-party aggregator penalty, dual-portal URL distinction, and legacy government ASP.NET/IIS crash mitigations—came from my direct analysis of the assignment requirements and real-world portal constraints.
+
+---
+
+## 🎥 Demonstration Video Walkthrough
+
+A complete end-to-end video demonstration explaining the system architecture, continuous crawler lifecycle, deterministic 4-pillar verification, verbatim evidence citations, and live dashboard walkthrough:
+
+👉 **[Watch Live Video Demonstration (Google Drive)](https://drive.google.com/file/d/1jAfyCGAc9T-W_cY2MJQA8KfHO7TgaXuR/view?usp=sharing)**
 
 ---
 
@@ -265,5 +274,6 @@ While architecting, implementing, and stress-testing this intelligence engine, I
 ## 👤 Author
 **Sanskriti Goswami**  
 Candidate for Edxso AI Engineer Intern  
-Repository: [github.com/sanskritig007/scholarship-crawler](https://github.com/sanskritig007/scholarship-crawler)
+Repository: [github.com/sanskritig007/scholarship-crawler](https://github.com/sanskritig007/scholarship-crawler)  
+Demo Video: [Watch on Google Drive](https://drive.google.com/file/d/1jAfyCGAc9T-W_cY2MJQA8KfHO7TgaXuR/view?usp=sharing)
 

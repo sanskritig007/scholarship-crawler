@@ -3,6 +3,7 @@
 **Author:** Sanskriti Goswami  
 **Project:** Edxso AI Engineer Intern - Assignment 2  
 **Target Repository:** [github.com/sanskritig007/scholarship-crawler](https://github.com/sanskritig007/scholarship-crawler)  
+**Demonstration Video:** [Watch on Google Drive](https://drive.google.com/file/d/1jAfyCGAc9T-W_cY2MJQA8KfHO7TgaXuR/view?usp=sharing)  
 **Date:** November 2026  
 
 ---
