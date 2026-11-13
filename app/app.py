@@ -227,12 +227,14 @@ with right_col:
 
                 st.markdown(f"**📄 Documents Required:** {item.get('documents_required', 'Standard documents')}")
                 st.markdown("---")
-                btn_col1, btn_col2 = st.columns(2)
-                with btn_col1:
-                    st.link_button("🌐 Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
-                with btn_col2:
-                    if item.get("application_url"):
+                if item.get("application_url") and item.get("application_url") != item.get("official_source_url"):
+                    btn_col1, btn_col2 = st.columns(2)
+                    with btn_col1:
+                        st.link_button("🌐 Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
+                    with btn_col2:
                         st.link_button("📝 Direct Application Portal ↗", item["application_url"], use_container_width=True)
+                else:
+                    st.link_button("🌐 Open Primary Official Portal ↗", item["official_source_url"], use_container_width=True)
 
             with tab2:
                 st.markdown("<div style='margin-top: 12px;'></div>", unsafe_allow_html=True)

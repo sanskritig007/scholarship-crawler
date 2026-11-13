@@ -941,7 +941,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <a href="${item.official_source_url}" target="_blank" class="btn-action primary">
                             🌐 View Primary Official Portal ↗
                         </a>
-                        ${item.application_url ? `
+                        ${item.application_url && item.application_url !== item.official_source_url ? `
                             <a href="${item.application_url}" target="_blank" class="btn-action secondary">
                                 📝 Direct Online Application ↗
                             </a>
