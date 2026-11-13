@@ -11,19 +11,15 @@
 
 ---
 
-> [!NOTE]
-> ### 💡 Authorship, System Architecture & Engineering Ownership
-> * **Conception, System Design & Problem Solving:** 100% conceived, architected, and directed by **Sanskriti Goswami**.
-> * **AI Assistance Disclosure:** Generative AI was leveraged strictly as an accelerator for code synthesis, boilerplate generation, and rapid iteration under my constant instruction and review.
-> * **Engineering Ownership:** Not a single architectural decision, schema field, or edge-case handling mechanism was decided autonomously by AI. Every idea—from the 4-pillar deterministic confidence rubric and verbatim sentence grounding to the third-party aggregator penalty, dual-portal URL distinction, and legacy government ASP.NET/IIS crash mitigations—came from my direct analysis of the assignment requirements and real-world portal constraints.
+**Demonstration Video Walkthrough:** [Watch Live on Google Drive ↗](https://drive.google.com/file/d/1jAfyCGAc9T-W_cY2MJQA8KfHO7TgaXuR/view?usp=sharing)
 
 ---
 
-## 🎥 Demonstration Video Walkthrough
-
-A complete end-to-end video demonstration explaining the system architecture, continuous crawler lifecycle, deterministic 4-pillar verification, verbatim evidence citations, and live dashboard walkthrough:
-
-👉 **[Watch Live Video Demonstration (Google Drive)](https://drive.google.com/file/d/1jAfyCGAc9T-W_cY2MJQA8KfHO7TgaXuR/view?usp=sharing)**
+> [!NOTE]
+> ### Authorship, System Architecture & Engineering Ownership
+> * **Conception, System Design & Problem Solving:** 100% conceived, architected, and directed by **Sanskriti Goswami**.
+> * **AI Assistance Disclosure:** Generative AI was leveraged strictly as an accelerator for code synthesis, boilerplate generation, and rapid iteration under my constant instruction and review.
+> * **Engineering Ownership:** Not a single architectural decision, schema field, or edge-case handling mechanism was decided autonomously by AI. Every idea—from the 4-pillar deterministic confidence rubric and verbatim sentence grounding to the third-party aggregator penalty, dual-portal URL distinction, and legacy government ASP.NET/IIS crash mitigations—came from my direct analysis of the assignment requirements and real-world portal constraints.
 
 ---
 
