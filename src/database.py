@@ -305,11 +305,11 @@ def log_crawl_run(
     summary_notes: str = "",
     db_path: Path = DB_PATH
 ) -> int:
-    """Logs a crawl run execution summary."""
+    """Logs a crawl run execution summary (updates existing run_id if already present)."""
     with get_connection(db_path) as conn:
         cursor = conn.cursor()
         cursor.execute("""
-        INSERT INTO crawl_runs (
+        INSERT OR REPLACE INTO crawl_runs (
             run_id, started_at, completed_at, total_discovered, total_verified,
             changes_detected, expired_detected, summary_notes
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
